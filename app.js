@@ -1,27 +1,17 @@
-var express = require('express');
-var app = express();
+var app = require('./config/server');
 
-app.set('view engine', 'ejs');
+// var rotaNoticias = require('./app/routes/noticias')(app);
+// var rotaHome = require('./app/routes/home')(app);
+// var rotaNoticia = require('./app/routes/noticia');
+// var rotatecnologia = require('./app/routes/tecnologia');
+// var rotaFormularioInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia');
 
-app.get('/tecnologia',function(req, res){
-    res.render("secao/tecnologia");
-});
-app.get('/formulario_inclusao_noticia',function(req, res){
-    res.render("admin/form_add_noticia");
-});
-app.get('/noticias',function(req, res){
-    res.render("noticias/noticias");
-});
-app.get('/noticia',function(req, res){
-    res.render("noticias/noticia");
-});
-app.get('/tecnologia',function(req, res){
-    res.render("secao/tecnologia");
-});
-app.get('/',function(req, res){
-    res.render("home/index");
-});
+
+
+// rotaNoticia(app);
+// rotatecnologia(app);
+// rotaFormularioInclusaoNoticia(app);
 
 app.listen(3000, function(){
-    console.log("Servidor rodando com express");
+    console.log("Servidor online.");
 });
