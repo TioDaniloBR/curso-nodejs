@@ -8,7 +8,7 @@ module.exports.noticias_salvar = function(app, req, res){
         //validação com express validator
         req.assert('titulo','O Título é um campo obrigatório').notEmpty();
         req.assert('resumo','O campo resumo é obrigatório').notEmpty();
-        req.assert('resumo','O campo resumo deveconter entre 10 e 100 caracteres.').len(10,100);
+        req.assert('resumo','O campo resumo deve conter entre 10 e 100 caracteres.').len(10,100);
         req.assert('autor','O campo autor é obrigatório').notEmpty();
         req.assert('data_noticia','O campo data é obrigatório').isDate({format:'YYYY-MM-DD'});
         req.assert('noticia','O campo notícia é obrigatório').notEmpty();
