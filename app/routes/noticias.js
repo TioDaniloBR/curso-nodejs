@@ -3,13 +3,10 @@
 module.exports = function(app){
 
     app.get('/noticias',function(req, res){
+        app.app.controllers.noticias.noticias(app, req, res);        
+    });
 
-        var connection = app.config.db_connection();
-        var noticiasDAO = new app.app.models.NoticiasDAO(connection);
-
-        noticiasDAO.getNoticias(function(erro, resultado){
-            res.render("noticias/noticias", {noticias:resultado});
-        });
-        
+    app.get('/noticia',function(req, res){
+        app.app.controllers.noticias.noticia(app, req, res);        
     });
 }
