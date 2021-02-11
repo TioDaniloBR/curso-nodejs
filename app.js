@@ -1,17 +1,13 @@
-var app = require('./config/server');
+require('dotenv/config');
+const express = require('express');
+const routes = require('./src/routes');
 
-// var rotaNoticias = require('./app/routes/noticias')(app);
-// var rotaHome = require('./app/routes/home')(app);
-// var rotaNoticia = require('./app/routes/noticia');
-// var rotatecnologia = require('./app/routes/tecnologia');
-// var rotaFormularioInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia');
+const app = express();
+
+app.use(express.json());
+app.use(routes);
 
 
-
-// rotaNoticia(app);
-// rotatecnologia(app);
-// rotaFormularioInclusaoNoticia(app);
-
-app.listen(3000, function(){
-    console.log("Servidor online.");
+app.listen(process.env.PORT, function(){
+    console.log(`Server online on ${process.env.PORT}`);
 });
