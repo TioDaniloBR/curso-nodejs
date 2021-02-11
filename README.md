@@ -1,3 +1,3 @@
-Projeto de um portal de notícias desenvolvido em Node.js como acompanhamento do Curso completo do Desenvolvedor NodeJS e MongoDB na Udemy.
+Projeto de uma api de um portal de notícias desenvolvido em Node.js.
 
 Desenvolvido por Danilo Silva.
